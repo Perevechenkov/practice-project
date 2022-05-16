@@ -1,0 +1,21 @@
+@use "../../abstracts/variables" as *;
+
+.button {
+     padding: 0.25rem 1rem;
+
+     border: 1px solid $border-violet;
+
+     background-color: $border-violet;
+     color: $text-color;
+     font: inherit;
+     cursor: pointer;
+
+     transition: all 0.1s ease-out;
+
+     &:hover,
+     &:active {
+          border-color: $border-violet-hover;
+
+          background-color: $border-violet-hover;
+     }
+}
