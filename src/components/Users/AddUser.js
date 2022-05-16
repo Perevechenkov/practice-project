@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import Card from '../UI/Card';
 import Button from '../UI/Button';
+import ErrorModal from '../UI/ErrorModal';
 import styles from './AddUser.module.scss';
 
 export default function AddUser(props) {
@@ -32,24 +33,27 @@ export default function AddUser(props) {
   };
 
   return (
-    <Card className={styles.input}>
-      <form onSubmit={addUserHandler}>
-        <label htmlFor='username'>Username</label>
-        <input
-          id='username'
-          type='text'
-          onChange={usernameChangeHandler}
-          value={enteredUsername}
-        />
-        <label htmlFor='age'>Age (years)</label>
-        <input
-          id='age'
-          type='number'
-          onChange={ageChangeHandler}
-          value={enteredAge}
-        />
-        <Button type='submit'>Add User</Button>
-      </form>
-    </Card>
+    <div>
+      <ErrorModal title='Error bruh' message='Smth went wrong'></ErrorModal>
+      <Card className={styles.input}>
+        <form onSubmit={addUserHandler}>
+          <label htmlFor='username'>Username</label>
+          <input
+            id='username'
+            type='text'
+            onChange={usernameChangeHandler}
+            value={enteredUsername}
+          />
+          <label htmlFor='age'>Age (years)</label>
+          <input
+            id='age'
+            type='number'
+            onChange={ageChangeHandler}
+            value={enteredAge}
+          />
+          <Button type='submit'>Add User</Button>
+        </form>
+      </Card>
+    </div>
   );
 }
