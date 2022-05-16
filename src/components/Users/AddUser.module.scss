@@ -1,0 +1,36 @@
+@use "../../abstracts/variables" as *;
+
+.input {
+     width: 90%;
+     max-width: 40rem;
+     margin: 2rem auto;
+     padding: 1rem;
+
+     label {
+          margin-bottom: 0.5rem;
+
+          display: block;
+
+          color: $text-color;
+          font-weight: bold;
+     }
+
+     input {
+          width: 100%;
+          margin-bottom: 0.5rem;
+          padding: 0.15rem;
+
+          border: 1px solid $border-light-opace;
+
+          background-color: $bg-primary-light;
+          color: $text-color;
+          font: inherit;
+
+          transition: all 0.1s ease-out;
+
+          &:focus {
+               border-color: $border-light;
+               outline: none;
+          }
+     }
+}
