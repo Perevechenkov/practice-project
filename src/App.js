@@ -19,9 +19,9 @@ export default function App() {
   };
 
   return (
-    <div>
+    <>
       <AddUser onAddUser={updateUsersHandler} />
       <UsersList users={usersList} />
-    </div>
+    </>
   );
 }

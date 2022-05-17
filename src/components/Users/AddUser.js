@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
 import ErrorModal from '../UI/ErrorModal';
+
 import styles from './AddUser.module.scss';
 
 export default function AddUser(props) {
@@ -43,7 +44,7 @@ export default function AddUser(props) {
   };
 
   return (
-    <div>
+    <>
       {error && (
         <ErrorModal
           title={error.title}
@@ -70,6 +71,6 @@ export default function AddUser(props) {
           <Button type='submit'>Add User</Button>
         </form>
       </Card>
-    </div>
+    </>
   );
 }
